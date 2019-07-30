@@ -48,7 +48,10 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
+	// Lots of our old blogs float images all over the place.
+	// If we forced the headers to clear those images, most of the old
+	// blogs would just look really messed up.
+	// clear: both; 
 	margin: $size__spacing-unit 0;
 }
 

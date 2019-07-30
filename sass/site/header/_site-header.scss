@@ -1,7 +1,11 @@
 // Site header
 
+@import './site-header-mixins';
+
 .site-header {
 	padding: 1em;
+
+	// @include header-text-colors(#fff);
 
 	&.featured-image {
 		display: flex;
@@ -11,12 +15,13 @@
 
 		.site-branding-container {
 			margin-bottom: auto;
+			// background: transparent;
 		}
 	}
 
 	@include media(tablet) {
 		margin: 0;
-		padding: 3rem 0;
+		padding: 0 0 1rem 0;
 
 		&.featured-image {
 			min-height: 100vh;
@@ -25,12 +30,26 @@
 	}
 }
 
+.site-branding-container {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+	z-index: 999;
+	
+	background: $color__menu-background;
+	padding: 10px 0;
+}
+
+
 // Site branding
 
 .site-branding {
 
 	color: $color__text-light;
 	position: relative;
+	display: flex;
+	justify-content: space-between;
 
 	@include media(tablet) {
 		margin: 0 $size__site-margins;
@@ -83,34 +102,29 @@
 // Site title
 
 .site-title {
-	margin: auto;
+	margin: auto 10px;
 	display: inline;
-	color: $color__text-main;
+	color: $color__menu;
 
 	a {
-		color: $color__text-main;
+		color: $color__menu;
 
 		&:link,
 		&:visited {
-			color: $color__text-main;
+			color: $color__menu;
 		}
 
 		&:hover {
-			color: $color__text-hover;
+			opacity: $opacity__menu-hover;
 		}
 	}
 
 	.featured-image & {
-		margin: 0;
+		// margin: 0;
 
 		@include media(tablet) {
 			display: inline-block;
 		}
-	}
-
-	/* When there is no description set, make sure navigation appears below title. */
-	+ .main-navigation {
-		display: block;
 	}
 
 	@include media(tablet) {

@@ -21,14 +21,7 @@
 		<?php endif; ?>
 	<?php endif; ?>
 
-	<?php
-	$description = get_bloginfo( 'description', 'display' );
-	if ( $description || is_customize_preview() ) :
-		?>
-			<p class="site-description">
-				<?php echo $description; ?>
-			</p>
-	<?php endif; ?>
+
 	<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
 			<?php

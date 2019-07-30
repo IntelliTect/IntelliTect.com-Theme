@@ -73,6 +73,8 @@
 		height: 2px;
 		margin: $size__spacing-unit 0;
 		width: 1em;
+
+		opacity: 0; // Andrew: This is dumb, but i didn't want to have to mess with the spacing issues caused if I deleted the dash outright.
 	}
 }
 

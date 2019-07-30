@@ -1,0 +1,34 @@
+@mixin header-text-colors($primary: #fff) {
+    .site-branding .site-title,
+	.site-branding .site-description,
+	.main-navigation a:after,
+	.main-navigation .main-menu > li.menu-item-has-children:after,
+	.main-navigation li,
+	.social-navigation li,
+	.entry-meta,
+	.entry-title {
+		color: $primary;
+	}
+
+	.main-navigation a,
+	.main-navigation a + svg,
+	.social-navigation a,
+	.site-title a,
+	.site-featured-image a {
+		color: $primary;
+		transition: opacity $link_transition ease-in-out;
+
+		&:hover,
+		&:active,
+		&:hover + svg,
+		&:active + svg {
+			color: $primary;
+			opacity: 0.6;
+		}
+
+		&:focus,
+		&:focus + svg {
+			color: $primary;
+		}
+	}
+}

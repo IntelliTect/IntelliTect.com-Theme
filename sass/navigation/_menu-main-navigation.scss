@@ -2,12 +2,10 @@
 
 .main-navigation {
 
-	display: block;
-	margin-top: #{0.25 * $size__spacing-unit};
-
-	body.page & {
-		display: block;
-	}
+	display: flex;
+	flex-grow: 1;
+	justify-content: flex-end;
+	margin-right: 10px;
 
 	> div {
 		display: inline;
@@ -54,14 +52,14 @@
 
 		> li {
 
-			color: $color__link;
+			color: $color__menu;
 			display: inline;
 			position: relative;
 
 			> a {
 
 				font-weight: 700;
-				color: $color__link;
+				color: $color__menu;
 				margin-right: #{0.5 * $size__spacing-unit};
 
 				+ svg {
@@ -70,7 +68,8 @@
 
 				&:hover,
 				&:hover + svg {
-					color: $color__link-hover;
+					color: $color__menu;
+					opacity: $opacity__menu-hover;
 				}
 			}
 
@@ -140,7 +139,7 @@
 
 	.sub-menu {
 
-		background-color: $color__link;
+		background-color: $color__menu-background;
 		color: $color__background-body;
 		list-style: none;
 		padding-left: 0;

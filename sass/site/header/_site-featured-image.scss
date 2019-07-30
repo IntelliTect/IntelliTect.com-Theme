@@ -8,42 +8,46 @@
 	/* Need relative positioning to properly align layers. */
 	position: relative;
 
+	// .site-branding .site-title,
+	// .site-branding .site-description,
+	// .main-navigation a:after,
+	// .main-navigation .main-menu > li.menu-item-has-children:after,
+	// .main-navigation li,
+	// .social-navigation li,
+	.entry-meta,
+	.entry-title {
+		color: white;;
+	}
+
+	// .main-navigation a,
+	// .main-navigation a + svg,
+	// .social-navigation a,
+	// .site-title a,
+	// .site-featured-image a {
+	// 	color: $primary;
+	// 	transition: opacity $link_transition ease-in-out;
+
+	// 	&:hover,
+	// 	&:active,
+	// 	&:hover + svg,
+	// 	&:active + svg {
+	// 		color: $primary;
+	// 		opacity: 0.6;
+	// 	}
+
+	// 	&:focus,
+	// 	&:focus + svg {
+	// 		color: $primary;
+	// 	}
+	// }
+
 	/* Add text shadow to text, to increase readability. */
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 
 	/* Set white text color when featured image is set. */
-	.site-branding .site-title,
-	.site-branding .site-description,
-	.main-navigation a:after,
-	.main-navigation .main-menu > li.menu-item-has-children:after,
-	.main-navigation li,
-	.social-navigation li,
-	.entry-meta,
-	.entry-title {
-		color: $color__background-body;
-	}
-
-	.main-navigation a,
-	.main-navigation a + svg,
-	.social-navigation a,
-	.site-title a,
-	.site-featured-image a {
-		color: $color__background-body;
-		transition: opacity $link_transition ease-in-out;
-
-		&:hover,
-		&:active,
-		&:hover + svg,
-		&:active + svg {
-			color: $color__background-body;
-			opacity: 0.6;
-		}
-
-		&:focus,
-		&:focus + svg {
-			color: $color__background-body;
-		}
-	}
+	// commented because this is currently white regardless of anything,
+	// since the normal header style is white-on-black.
+	// @include header-text-colors(#fff);
 
 	.main-navigation .sub-menu a {
 		opacity: inherit;
@@ -245,28 +249,28 @@
 	  	/* When image filters are active, a blue overlay is added. */
 		.image-filters-enabled & {
 			background: $color__link;
-			opacity: .8;
+			opacity: .6;
 			z-index: 3;
 
 			/* Browsers supporting mix-blend-mode don't need opacity < 1 */
-			@supports (mix-blend-mode: multiply) {
-				opacity: 1;
-			}
+			// @supports (mix-blend-mode: multiply) {
+			// 	opacity: 1;
+			// }
 		}
 	}
 
 	/* Fourth layer: overlay. */
-  	.image-filters-enabled & .site-branding-container:after {
-		background: rgba(0, 0, 0, 0.35);
-		mix-blend-mode: overlay;
-		opacity: 0.5;
-		z-index: 4;
+	// .image-filters-enabled & .site-branding-container:after {
+	// 	background: rgba(0, 0, 0, 0.35);
+	// 	mix-blend-mode: overlay;
+	// 	opacity: 0.5;
+	// 	z-index: 4;
 
-		/* Browsers supporting mix-blend-mode can have a light overlay */
-		@supports (mix-blend-mode: overlay) {
-			background: rgba($color__background-body, 0.35);
-		}
-	}
+	// 	/* Browsers supporting mix-blend-mode can have a light overlay */
+	// 	@supports (mix-blend-mode: overlay) {
+	// 		background: rgba($color__background-body, 0.35);
+	// 	}
+	// }
 
 	/* Fifth layer: readability overlay */
 	&:after {
@@ -285,7 +289,8 @@
 			opacity: 0.38;
 
 			@include media(tablet) {
-				opacity: 0.18;
+				// opacity: 0.18;
+				opacity: 0.38;
 			}
 		}
 	}

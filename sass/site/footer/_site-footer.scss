@@ -1,7 +1,9 @@
 /* Site footer */
 
 #colophon {
-
+	background-color: #191e2d;
+	color: white;
+	
 	.widget-area,
 	.site-info {
 		margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit;
@@ -24,14 +26,14 @@
 	}
 
 	.site-info {
-		color: $color__text-light;
+		// color: $color__text-light;
 
 		a {
 			color: inherit;
 
 			&:hover {
 				text-decoration: none;
-				color: $color__link;
+				opacity: $opacity__menu-hover;
 			}
 		}
 

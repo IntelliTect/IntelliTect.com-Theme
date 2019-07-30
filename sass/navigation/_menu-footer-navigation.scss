@@ -2,21 +2,66 @@
 
 .footer-navigation {
 
-	display: inline;
+	// display: inline;
 
-	& > div {
-		display: inline;
+	// & > div {
+	// 	display: inline;
+	// }
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+
+		li {
+			padding-left: 0;
+		}
 	}
 
 	.footer-menu {
 
-		display: inline;
+		// display: inline;
+		display: flex;
+		flex-flow: column;
+
+		@include media(tablet) {
+			// on non-phones...
+
+			flex-flow: row;
+			> li {
+				> a {
+					margin-top: 0rem;
+					margin-bottom: 1rem;
+				}
+			}
+			
+			li + li {
+				padding-top: 15px;
+			}
+		}
+
+		> li {
+			flex: 1 1 0;
+			> a {
+				margin-top: 1rem;
+				margin-bottom: 0.2rem;
+				display: block;
+				font-size: $font__size-md;
+				font-weight: bold;
+			}
+
+			
+			li {
+				// display: inline;
+				margin-right: 1rem;
+				line-height: 1rem;
+
+				+ li {
+					padding-top: 10px;
+				}
+			}
+		}
+
 		padding-left: 0;
 
-		li {
-			display: inline;
-			margin-right: 1rem;
-		}
 	}
-
 }
