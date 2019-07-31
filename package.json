@@ -1,11 +1,12 @@
 {
-  "name": "twentynineteen",
+  "name": "intellitect-2019",
   "version": "1.0.0",
-  "description": "Default WP Theme",
+  "description": "IntelliTect WP Theme",
+  "private": true,
   "bugs": {
-    "url": "https://github.com/WordPress/twentynineteen/issues"
+    "url": "https://github.com/IntelliTect/IntelliTect.com-Theme/issues"
   },
-  "homepage": "https://github.com/WordPress/twentynineteen#readme",
+  "homepage": "https://github.com/IntelliTect/IntelliTect.com-Theme#readme",
   "devDependencies": {
     "@wordpress/browserslist-config": "^2.2.2",
     "autoprefixer": "^9.1.5",
