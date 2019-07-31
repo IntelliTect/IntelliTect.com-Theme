@@ -58,7 +58,7 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 			array(
 				'menu-1' => __( 'Primary', 'twentynineteen' ),
 				'footer' => __( 'Footer Menu', 'twentynineteen' ),
-				'social' => __( 'Social Links Menu', 'twentynineteen' ),
+				// 'social' => __( 'Social Links Menu', 'twentynineteen' ),
 			)
 		);
 
@@ -321,3 +321,9 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom post types
+ */
+require get_template_directory() . '/inc/cpt-case-studies.php';
+require get_template_directory() . '/inc/cpt-team.php';

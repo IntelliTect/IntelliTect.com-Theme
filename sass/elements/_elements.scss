@@ -51,7 +51,7 @@ h6 {
 	// Lots of our old blogs float images all over the place.
 	// If we forced the headers to clear those images, most of the old
 	// blogs would just look really messed up.
-	// clear: both; 
+	// clear: both;
 	margin: $size__spacing-unit 0;
 }
 
@@ -89,6 +89,7 @@ blockquote {
 
 	cite {
 		color: $color__text-light;
+		display: block;
 	}
 }
 

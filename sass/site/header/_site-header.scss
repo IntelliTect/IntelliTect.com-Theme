@@ -5,13 +5,16 @@
 .site-header {
 	padding: 1em;
 
+	// bump the header down to account for the fixed-position menu bar.
+	margin-top: 50px !important;
+
 	// @include header-text-colors(#fff);
 
 	&.featured-image {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		min-height: 90vh;
+		// min-height: 50vh;
 
 		.site-branding-container {
 			margin-bottom: auto;
@@ -24,7 +27,7 @@
 		padding: 0 0 1rem 0;
 
 		&.featured-image {
-			min-height: 100vh;
+			min-height: 40vh;
 			margin-bottom: 3rem;
 		}
 	}
@@ -36,7 +39,7 @@
     left: 0;
     right: 0;
 	z-index: 999;
-	
+
 	background: $color__menu-background;
 	padding: 10px 0;
 }

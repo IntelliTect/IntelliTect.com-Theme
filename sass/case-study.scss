@@ -1,0 +1,173 @@
+
+.case-studies-archive {
+
+	.case-studies-tax-filters {
+		display: flex;
+		flex-flow: row wrap;
+		margin: -10px;
+		margin-bottom: 0px;
+
+		select {
+			visibility: visible !important;
+			width: 100%;
+			height: 125px;
+
+			option {
+				font-size: 0.8em;
+				padding: 1px;
+			}
+
+			@media(max-width: 767px) {
+				/* Make the filters small on mobile.
+				Mobile browsers pop up a native modal for
+				select components, so we don't need much screen realestate for them. */
+				height: 50px;
+			}
+		}
+
+		> * {
+			flex-grow: 1;
+			flex-basis: 300px;
+			margin: 10px;
+		}
+	}
+
+	.case-studies-search-form {
+		margin-bottom: 10px;
+	}
+
+	.case-studies {
+		display: flex;
+		flex-flow: row wrap;
+		margin: -10px;
+	}
+
+	.case-studies-item__wrap {
+		flex: 1 1 300px;
+		min-width: 200px;
+		padding: 10px;
+
+		display: flex;
+
+		> a {
+			text-decoration: none !important;
+			display: flex;
+			flex: 1 1 auto;
+		}
+
+		.case-studies-item__main {
+			display: flex;
+			flex-flow: column nowrap;
+			flex: 1 1 auto;
+			background: #eee;
+
+			.case-studies-item__image-wrap {
+				flex: 0 0;
+				height: 186px;
+				/* min-height: 186px; */
+				line-height: 0;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+			}
+
+			.case-studies-item__title-wrap {
+				padding: 1.2em 1.5em;
+				text-align: center;
+				flex: 1 0 auto;
+
+				.case-studies-item__title {
+					margin: 0 !important;
+				}
+			}
+		}
+	}
+
+}
+
+.case-studies-single {
+
+	.pcsd-graphic {
+		background: #FFF no-repeat scroll center center;
+		-webkit-background-size: contain;
+		background-size: contain;
+		z-index: 1;
+		margin-top: 5px;
+		text-align: center;
+	}
+
+	.clear-both {
+		clear: both
+	}
+
+	.aligncenter {
+		clear: none;
+	}
+
+	ul {
+		padding-left: 20px;
+		list-style-type: square;
+		list-style-position: inside;
+	}
+
+	li h1,li h2,li h3,li h4,li h5,li h6 {
+		display: inline;
+	}
+
+	.pcsd-sidebar {
+		float:none;
+		width: auto;
+		padding: 15px;
+		margin-left: 10px;
+		// margin-bottom: 15px;
+		margin-top: 15px;
+		border-left: 1px solid #ddd;
+
+		@include media (tablet) {
+			float: right;
+			width: 250px;
+			padding: 15px;
+			margin-top: 60px;
+		}
+		@include media (desktop) {
+			width: 400px;
+		}
+
+		font-size: 14px;
+		font-weight: 300;
+
+		.pcsd-sidebar-section {
+			font-size: 16px;
+			line-height: 1.1em;
+			padding: 0 0 25px 0;
+
+			li {
+				line-height: 1.8;
+			}
+
+			.pcsd-sidebar-header {
+				font-weight: 700;
+				padding-bottom: 10px
+			}
+
+			&.section-about {
+				line-height: 1.7em;
+			}
+
+			&.section-industries ul,
+			&.section-services ul {
+				margin: 0;
+				font-size: 16px;
+				padding-left: 0
+			}
+
+			&.section-pdf {
+				font-size: 1.3em;
+				padding-bottom: 0;
+			}
+		}
+	}
+}

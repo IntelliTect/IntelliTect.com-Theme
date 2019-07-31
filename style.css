@@ -60,6 +60,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * a custom font that includes just a Hoefler Text space replacement for that
  * character instead.
  */
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,400,700&display=swap");
 @font-face {
   font-family: 'NonBreakingSpaceOverride';
   src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMoAA0AAAAACDQAAALTAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACCahEICjx3CywAATYCJANUBCAFhiEHgWwbXQfILgpsY+rQRRARwyAs6uL7pxzYhxEE+32b3aeHmifR6tklkS9hiZA0ewkqGRJE+H7/+6378ASViK/PGeavqJyOzsceKi1s3BCiQsiOdn1r/RBgIJYEgCUhbm/8/8/h4saPssnTNkkiWUBrTRtjmQSajw3Ui3pZ3LYDPD+XG2C3JA/yKAS8/rU5eNfuGqRf4eNNgV4YAlIIgxglEkWe6FYpq10+wi3g+/nUgvgPFczNrz/RsTgVm/zfbPuHZlsuQECxuyqBcQwKFBjFgKO8AqP4bAN9tFJtnM9xPcbNjeXS/x1wY/xU52f5W/X1+9cnH4YwKIaoRRAkUkj/YlAAeF/624foiIDBgBmgQBeGAyhBljUPZUm/l2dTvmpqcBDUOHdbPZWd8JsBAsGr4w8/EDn82/bUPx4eh0YNrQTBuHO2FjQEAGBwK0DeI37DpQVqdERS4gZBhpeUhWCfLFz7J99aEBgsJCHvUGAdAPp4IADDCAPCEFMGpMZ9AQpTfQtQGhLbGVBZFV8BaqNyP68oTZgHNj3M8kBPfXTTC9t90UuzYhy9ciH0grVlOcqyCytisvbsERsEYztiznR0WCrmTksJwbSNK6fd1Rvr25I9oLvctUoEbNOmXJbqgYgPXEHJ82IUsrCnpkxh23F1rfZ2zcRnJYoXtauB3VTFkFXQg3uoZYD5qE0kdjDtoDoF1h2bulGmev5HbYhbrjtohQSRI4aNOkffIcT+d3v6atpaYh3JvPoQsztCcqvaBkppDSPcQ3bw3KaCBo1f5CJWTZEgW3LjLofYg51MaVezrx8xZitYbQ9KYeoRaqQdVLwSEfrKXLK1otCWOKNdR/YwYAfon5Yk8O2MJfSD10dPGA5PIJJQMkah0ugMJiv6x4Dm7LEa8xnrRGGGLAg4sAlbsA07sAt76DOsXKO3hIjtIlpnnFrt1qW4kh6NhS83P/6HB/fl1SMAAA==) format("woff2"), url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAUQAA0AAAAACDQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAE9AAAABwAAAAchf5yU0dERUYAAATYAAAAHAAAAB4AJwAbT1MvMgAAAaAAAABJAAAAYJAcgU5jbWFwAAACIAAAAF4AAAFqUUxBZ2dhc3AAAATQAAAACAAAAAgAAAAQZ2x5ZgAAApAAAAAyAAAAPL0n8y9oZWFkAAABMAAAADAAAAA2Fi93Z2hoZWEAAAFgAAAAHQAAACQOSgWaaG10eAAAAewAAAAzAAAAVC7TAQBsb2NhAAACgAAAABAAAAAsAOQBAm1heHAAAAGAAAAAHQAAACAAWQALbmFtZQAAAsQAAAF6AAADIYvD/Adwb3N0AAAEQAAAAI4AAADsapk2o3jaY2BkYGAA4ov5mwzj+W2+MnCzXwCKMNzgCBSB0LfbQDQ7AxuI4mBgAlEAFKQIRHjaY2BkYGD3+NvCwMDBAALsDAyMDKhAFAA3+wH3AAAAeNpjYGRgYBBl4GBgYgABEMnIABJzAPMZAAVmAGUAAAB42mNgZlJhnMDAysDCKsKygYGBYRqEZtrDYMT4D8gHSmEHjgUFOQwODAqqf9g9/rYwMLB7MNUAhRlBcsxBrMlASoGBEQAj8QtyAAAAeNrjYGBkAAGmWQwMjO8gmBnIZ2NA0ExAzNjAAFYJVn0ASBsD6VAIDZb7AtELAgANIgb9AHjaY2BgYGaAYBkGRgYQSAHyGMF8FgYPIM3HwMHAxMDGoMCwQIFLQV8hXvXP//9AcRCfAcb///h/ygPW+w/vb7olBjUHCTCyMcAFGZmABBO6AogThgZgIUsXAEDcEzcAAHjaY2BgECMCyoEgACZaAed42mNgYmRgYGBnYGNgYAZSDJqMgorCgoqCjECRXwwNrCAKSP5mAAFGBiRgyAAAi/YFBQAAeNqtkc1OwkAUhU/5M25cEhcsZick0AwlBJq6MWwgJkAgYV/KAA2lJeUn+hY+gktXvpKv4dLTMqKycGHsTZNv7px7z50ZAFd4hYHjdw1Ls4EiHjVncIFnzVnc4F1zDkWjrzmPW+NNcwGlzIRKI3fJlUyrEjZQxb3mDH2fNGfRx4vmHKqG0JzHg6E0F9DOlFBGBxUI1GEzLNT4S0aLuTtsGAEUuYcQHkyg3KmIum1bNUvKlrjbbAIleqHHnS4iSudpQcySMYtdFiXlAxzSbAwfMxK6kZoHKhbjjespMTioOPZnzI+4ucCeTVyKMVKLfeAS6vSWaTinuZwzyy/Dc7vaed+6KaV0kukdPUk6yOcctZPvvxxqksq2lEW8RvHjMEO2FCl/zy6p3NEm0R9OFSafJdldc4QVeyaaObMBO0/5cCaa6d9Ggyubxire+lEojscdjoWUR1xGOy8KD8mG2ZLO2l2paDc3A39qmU2z2W5YNv5+u79e6QfGJY/hAAB42m3NywrCMBQE0DupWp/1AYI7/6DEaLQu66Mrd35BKUWKJSlFv1+rue4cGM7shgR981qSon+ZNwUJ8iDgoYU2OvDRRQ99DDDECAHGmGCKmf80hZSx/Kik/LliFbtmN6xmt+yOjdg9GztV4tROnRwX/Bsaaw51nt4Lc7tWaZYHp/MlzKx51LZs5htNri+2AAAAAQAB//8AD3jaY2BkYGDgAWIxIGZiYARCESBmAfMYAAR6AEMAAAABAAAAANXtRbgAAAAA2AhRFAAAAADYCNuG) format("woff");
@@ -413,10 +414,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #111;
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-weight: 400;
   font-size: 1em;
-  line-height: 1.8;
+  line-height: 2;
   margin: 0;
   text-rendering: optimizeLegibility;
 }
@@ -427,9 +428,9 @@ select,
 optgroup,
 textarea {
   color: #111;
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 2;
   text-rendering: optimizeLegibility;
 }
 
@@ -488,7 +489,7 @@ h6 {
 }
 
 .page-title {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
 }
 
 .site-branding,
@@ -621,7 +622,7 @@ blockquote cite {
 pre {
   font-size: 0.88889em;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  line-height: 1.8;
+  line-height: 2;
   overflow: auto;
 }
 
@@ -828,7 +829,7 @@ ol {
 }
 
 li {
-  line-height: 1.8;
+  line-height: 2;
 }
 
 li > ul,
@@ -866,6 +867,7 @@ blockquote > p {
 
 blockquote cite {
   color: #767676;
+  display: block;
 }
 
 table {
@@ -1453,21 +1455,21 @@ a:focus {
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .sub-menu > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -1563,7 +1565,7 @@ a:focus {
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):hover > .sub-menu .sub-menu > li > a::before,
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus > .sub-menu .sub-menu > li > a::before,
 .main-navigation .main-menu .menu-item-has-children.is-focused:not(.off-canvas) > .sub-menu .sub-menu > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -2090,13 +2092,13 @@ a:focus {
 --------------------------------------------------------------*/
 .site-header {
   padding: 1em;
+  margin-top: 50px !important;
 }
 
 .site-header.featured-image {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 90vh;
 }
 
 .site-header.featured-image .site-branding-container {
@@ -2109,7 +2111,7 @@ a:focus {
     padding: 0 0 1rem 0;
   }
   .site-header.featured-image {
-    min-height: 100vh;
+    min-height: 40vh;
     margin-bottom: 3rem;
   }
 }
@@ -3437,7 +3439,7 @@ a:focus {
 .widget_recent_comments ul ul > li > a::before,
 .widget_recent_entries ul ul > li > a::before,
 .widget_rss ul ul > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -3803,7 +3805,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-categories ul > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -3834,7 +3836,7 @@ a:focus {
 }
 
 .entry .entry-content .wp-block-verse {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-family: "Merriweather", "Baskerville Old Face", Garamond, "Times New Roman", serif;
   font-size: 22px;
   line-height: 1.8;
 }
@@ -4678,4 +4680,274 @@ svg {
 
 .gallery-item > div > a:focus {
   box-shadow: 0 0 0 2px #0073aa;
+}
+
+/* Custom */
+.case-studies-archive .case-studies-tax-filters {
+  display: flex;
+  flex-flow: row wrap;
+  margin: -10px;
+  margin-bottom: 0px;
+}
+
+.case-studies-archive .case-studies-tax-filters select {
+  visibility: visible !important;
+  width: 100%;
+  height: 125px;
+}
+
+.case-studies-archive .case-studies-tax-filters select option {
+  font-size: 0.8em;
+  padding: 1px;
+}
+
+@media (max-width: 767px) {
+  .case-studies-archive .case-studies-tax-filters select {
+    /* Make the filters small on mobile.
+				Mobile browsers pop up a native modal for
+				select components, so we don't need much screen realestate for them. */
+    height: 50px;
+  }
+}
+
+.case-studies-archive .case-studies-tax-filters > * {
+  flex-grow: 1;
+  flex-basis: 300px;
+  margin: 10px;
+}
+
+.case-studies-archive .case-studies-search-form {
+  margin-bottom: 10px;
+}
+
+.case-studies-archive .case-studies {
+  display: flex;
+  flex-flow: row wrap;
+  margin: -10px;
+}
+
+.case-studies-archive .case-studies-item__wrap {
+  flex: 1 1 300px;
+  min-width: 200px;
+  padding: 10px;
+  display: flex;
+}
+
+.case-studies-archive .case-studies-item__wrap > a {
+  text-decoration: none !important;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.case-studies-archive .case-studies-item__wrap .case-studies-item__main {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 auto;
+  background: #eee;
+}
+
+.case-studies-archive .case-studies-item__wrap .case-studies-item__main .case-studies-item__image-wrap {
+  flex: 0 0;
+  height: 186px;
+  /* min-height: 186px; */
+  line-height: 0;
+}
+
+.case-studies-archive .case-studies-item__wrap .case-studies-item__main .case-studies-item__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.case-studies-archive .case-studies-item__wrap .case-studies-item__main .case-studies-item__title-wrap {
+  padding: 1.2em 1.5em;
+  text-align: center;
+  flex: 1 0 auto;
+}
+
+.case-studies-archive .case-studies-item__wrap .case-studies-item__main .case-studies-item__title-wrap .case-studies-item__title {
+  margin: 0 !important;
+}
+
+.case-studies-single .pcsd-graphic {
+  background: #FFF no-repeat scroll center center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  z-index: 1;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.case-studies-single .clear-both {
+  clear: both;
+}
+
+.case-studies-single .aligncenter {
+  clear: none;
+}
+
+.case-studies-single ul {
+  padding-left: 20px;
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+.case-studies-single li h1, .case-studies-single li h2, .case-studies-single li h3, .case-studies-single li h4, .case-studies-single li h5, .case-studies-single li h6 {
+  display: inline;
+}
+
+.case-studies-single .pcsd-sidebar {
+  float: none;
+  width: auto;
+  padding: 15px;
+  margin-left: 10px;
+  margin-top: 15px;
+  border-left: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 768px) {
+  .case-studies-single .pcsd-sidebar {
+    float: right;
+    width: 250px;
+    padding: 15px;
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .case-studies-single .pcsd-sidebar {
+    width: 400px;
+  }
+}
+
+.case-studies-single .pcsd-sidebar .pcsd-sidebar-section {
+  font-size: 16px;
+  line-height: 1.1em;
+  padding: 0 0 25px 0;
+}
+
+.case-studies-single .pcsd-sidebar .pcsd-sidebar-section li {
+  line-height: 1.8;
+}
+
+.case-studies-single .pcsd-sidebar .pcsd-sidebar-section .pcsd-sidebar-header {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.case-studies-single .pcsd-sidebar .pcsd-sidebar-section.section-about {
+  line-height: 1.7em;
+}
+
+.case-studies-single .pcsd-sidebar .pcsd-sidebar-section.section-industries ul,
+.case-studies-single .pcsd-sidebar .pcsd-sidebar-section.section-services ul {
+  margin: 0;
+  font-size: 16px;
+  padding-left: 0;
+}
+
+.case-studies-single .pcsd-sidebar .pcsd-sidebar-section.section-pdf {
+  font-size: 1.3em;
+  padding-bottom: 0;
+}
+
+.team-archive {
+  margin-bottom: 100px !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .team-archive {
+    margin: 0 calc(10%);
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .team-archive {
+    margin: 0 auto;
+    width: 1168px;
+  }
+}
+
+@media only screen and (min-width: 1379px) {
+  .team-archive {
+    margin: 0 auto;
+    width: 1379px;
+  }
+}
+
+.team-members {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  font-size: 0.8em;
+}
+
+.team-member {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 4px;
+  width: 160px;
+  max-width: 160px;
+  font-size: 0.6em;
+}
+
+@media only screen and (min-width: 768px) {
+  .team-member {
+    padding: 6px;
+    width: 200px;
+    max-width: 200px;
+    font-size: 0.85em;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .team-member {
+    padding: 8px;
+    width: 220px;
+    max-width: 220px;
+    font-size: 1em;
+  }
+}
+
+.team-member .team-member__image {
+  background: #fff;
+}
+
+.team-member .team-member__image img {
+  display: block;
+}
+
+.team-member .team-member__text {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.team-member .team-member__text, .team-member .team-member__text * {
+  background-color: #f7f4f2;
+  color: inherit !important;
+}
+
+.team-members.lead .team-member .team-member__text,
+.team-members.lead .team-member .team-member__text * {
+  background: #191e2d;
+  color: white !important;
+}
+
+.team-member .team-member__text * {
+  text-align: center;
+}
+
+.team-member .team-member__text .team-member__title {
+  margin: 0 !important;
+}
+
+.team-member .team-member__text .team-member__position {
+  font-size: 0.9em;
+  line-height: 1.5;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.4px;
+  margin-top: 9px;
 }
