@@ -95,6 +95,7 @@ h3 {
 .site-description,
 .main-navigation,
 .nav-links,
+.pagination .nav-links,
 .page-title,
 .page-description,
 .comment-author .fn,
@@ -105,7 +106,6 @@ h4 {
 	font-size: $font__size-md;
 }
 
-.pagination .nav-links,
 .comment-content,
 h5 {
 	font-size: $font__size-sm;

@@ -44,11 +44,6 @@
 	/* Add text shadow to text, to increase readability. */
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 
-	/* Set white text color when featured image is set. */
-	// commented because this is currently white regardless of anything,
-	// since the normal header style is white-on-black.
-	// @include header-text-colors(#fff);
-
 	.main-navigation .sub-menu a {
 		opacity: inherit;
 	}

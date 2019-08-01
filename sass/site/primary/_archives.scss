@@ -24,16 +24,16 @@
 		display: inherit;
 		clear: both;
 
-		&:after {
-			content: ".";
-			font-weight: bold;
-			color: $color__text-light;
-		}
+		// &:after {
+		// 	content: ".";
+		// 	font-weight: bold;
+		// 	color: $color__text-light;
+		// }
 	}
 }
 
 .archive .page-header .page-description {
-	display: block;
+	// display: block;
 	color: $color__text-main;
 	font-size: 1em;
 }
@@ -58,6 +58,9 @@
 			margin: calc(3 * #{$size__spacing-unit}) $size__site-margins calc(#{ $size__spacing-unit } / 2);
 		}
 	}
+}
+
+.search-form {
 
 	.search-submit {
 		vertical-align: middle;

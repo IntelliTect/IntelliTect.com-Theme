@@ -292,6 +292,31 @@ function twentynineteen_colors_css_wrap() {
 }
 add_action( 'wp_head', 'twentynineteen_colors_css_wrap' );
 
+// From author pages, redirect to the cpt_team page for the person
+// if the person has a cpt_team page with the correct 'user' meta field.
+add_action( 'template_redirect', function() {
+    if ( is_author() ) {
+		$id = get_query_var( 'author' );
+
+		$team_pages = new WP_Query(array(
+			'post_type' => 'cpt_team',
+			'post_status' => 'publish',
+			'meta_query' => array(
+				array(
+					'key' => 'user',
+					'value' => $id,
+					'compare' => '=',
+				)
+			)
+		));
+
+		if ( $team_pages->have_posts() ) {
+			wp_redirect(get_permalink($team_pages->post->ID));
+			die;
+		}
+    }
+});
+
 /**
  * SVG Icons class.
  */

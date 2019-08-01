@@ -1,5 +1,9 @@
 /* !Block styles */
 
+.entry.excerpt .entry-content p:first-child {
+	margin: 0 !important;
+}
+
 .entry .entry-content > *,
 .entry .entry-summary > * {
 	margin: 32px 0;
@@ -512,7 +516,7 @@
 		}
 
 		.aligncenter {
-			
+
 			@include postContentMaxWidth();
 
 			@include media(tablet) {

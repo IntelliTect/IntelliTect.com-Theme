@@ -1,14 +1,18 @@
 // Site header
 
-@import './site-header-mixins';
+$header-height: 50px;
+$header-padding: 10px;
+$logo-padding: 5px;
+$admin-bar-height: 32px;
 
 .site-header {
 	padding: 1em;
 
 	// bump the header down to account for the fixed-position menu bar.
-	margin-top: 50px !important;
-
-	// @include header-text-colors(#fff);
+	margin-top: $header-height !important;
+	.admin-bar & {
+		margin-top: #{$header-height + $admin-bar-height} !important;
+	}
 
 	&.featured-image {
 		display: flex;
@@ -39,9 +43,14 @@
     left: 0;
     right: 0;
 	z-index: 999;
+	height: $header-height;
+
+	.admin-bar & {
+		top: $admin-bar-height;
+	}
 
 	background: $color__menu-background;
-	padding: 10px 0;
+	padding: $header-padding 0;
 }
 
 
@@ -105,7 +114,8 @@
 // Site title
 
 .site-title {
-	margin: auto 10px;
+	$title-margin-adjust: $logo-padding - $header-padding;
+	margin: $title-margin-adjust 10px $title-margin-adjust 0;
 	display: inline;
 	color: $color__menu;
 
@@ -120,6 +130,10 @@
 		&:hover {
 			opacity: $opacity__menu-hover;
 		}
+	}
+
+	img {
+		height: $header-height + ( $title-margin-adjust * 2 );
 	}
 
 	.featured-image & {

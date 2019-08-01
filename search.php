@@ -24,6 +24,7 @@ get_header();
 				<div class="page-description"><?php echo get_search_query(); ?></div>
 			</header><!-- .page-header -->
 
+			<div class="posts_container">
 			<?php
 			// Start the Loop.
 			while ( have_posts() ) :
@@ -41,6 +42,9 @@ get_header();
 
 			// Previous/next page navigation.
 			twentynineteen_the_posts_navigation();
+			?>
+			</div>
+			<?php
 
 			// If no content, include the "No posts found" template.
 		else :
