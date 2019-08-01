@@ -39,14 +39,45 @@
 					$close_ul_pos = strripos($menu, "</ul>");
 
 					$template_dir = get_template_directory_uri();
-					$last_column = "<li class='menu-item menu-item-has-children'>
+					$last_column = "
+					<li class='menu-item menu-item-has-children'>
 						<a >&nbsp;</a>
 						
 						<img src='$template_dir/static/Microsoft-Gold-Partner-Logo.jpg' />
-					</li>";
+					
+						<a >&nbsp;</a>
+
+						<div class='social-links' >
+							<a href='https://www.facebook.com/IntelliTect/' target='_blank'>
+								<i class='fab fa-facebook-f'></i>
+							</a>
+							<a href='https://twitter.com/intellitect' target='_blank'>
+								<i class='fab fa-twitter'></i>
+							</a>
+							<a href='https://www.linkedin.com/company/intellitect/' target='_blank'>
+								<i class='fab fa-linkedin-in'></i>
+							</a>
+							<a href='mailto:Info@IntelliTect.com'>
+								<i class='fa fa-envelope'></i>
+							</a>
+						</div>
+
+				</li>
+					";
+
+					$copyright = "
+					<p style='text-align: center;'>
+						© IntelliTect 2019
+						&nbsp;&nbsp;
+						<a href='/site-map/'>Site Map</a>
+						&nbsp;&nbsp;
+						<a href='/privacy-policy/'>Our Privacy Policy</a>
+					</p>
+					
+					";
 
 					$menu = substr_replace($menu, $last_column, $close_ul_pos, 0);
-					echo $menu;
+					echo $menu . $copyright;
 					?>
 				</nav><!-- .footer-navigation -->
 			<?php endif; ?>

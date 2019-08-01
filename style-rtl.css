@@ -1678,20 +1678,15 @@ a:focus {
   .footer-navigation .footer-menu {
     flex-flow: row;
   }
-  .footer-navigation .footer-menu > li > a {
-    margin-top: 0rem;
-    margin-bottom: 1rem;
-  }
-  .footer-navigation .footer-menu li + li {
-    padding-top: 15px;
-  }
 }
 
-.footer-navigation .footer-menu > li {
+.footer-navigation .footer-menu > li.menu-item {
   flex: 1 1 0;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-.footer-navigation .footer-menu > li > a {
+.footer-navigation .footer-menu > li.menu-item > a {
   margin-top: 1rem;
   margin-bottom: 0.2rem;
   display: block;
@@ -1699,13 +1694,50 @@ a:focus {
   font-weight: bold;
 }
 
-.footer-navigation .footer-menu > li li {
+@media only screen and (min-width: 768px) {
+  .footer-navigation .footer-menu > li.menu-item > a {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-navigation .footer-menu > li.menu-item + li.menu-item {
+  padding-top: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-navigation .footer-menu > li.menu-item + li.menu-item {
+    padding-top: 0;
+  }
+}
+
+.footer-navigation .footer-menu > li.menu-item .sub-menu li.menu-item {
   margin-left: 1rem;
   line-height: 1rem;
 }
 
-.footer-navigation .footer-menu > li li + li {
+.footer-navigation .footer-menu > li.menu-item .sub-menu li.menu-item + li.menu-item {
   padding-top: 10px;
+}
+
+.footer-navigation .footer-menu .social-links {
+  margin: auto;
+  align-content: center;
+}
+
+.footer-navigation .footer-menu .social-links a {
+  background: #6ec1e4;
+  border-radius: .35rem;
+  font-size: 2rem;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+}
+
+.footer-navigation .footer-menu .social-links i {
+  padding: .35rem;
+  width: 1.4em;
 }
 
 /*--------------------------------------------------------------
