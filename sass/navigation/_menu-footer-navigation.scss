@@ -22,46 +22,78 @@
 		// display: inline;
 		display: flex;
 		flex-flow: column;
-
+		padding-left: 0;
+			
 		@include media(tablet) {
 			// on non-phones...
-
 			flex-flow: row;
-			> li {
-				> a {
-					margin-top: 0rem;
-					margin-bottom: 1rem;
-				}
-			}
-			
-			li + li {
-				padding-top: 15px;
-			}
 		}
 
-		> li {
+		// Root-level li elements that behave like columns
+		> li.menu-item {
 			flex: 1 1 0;
+			display: flex;
+			flex-flow: column nowrap;
+
+			// The header at the start of each column
 			> a {
 				margin-top: 1rem;
 				margin-bottom: 0.2rem;
 				display: block;
 				font-size: $font__size-md;
 				font-weight: bold;
+
+				@include media(tablet) {
+					// on non-phones...
+					margin-top: 0rem;
+					margin-bottom: 1rem;
+				}
 			}
-
 			
-			li {
-				// display: inline;
-				margin-right: 1rem;
-				line-height: 1rem;
+			// Columns after the first column
+			+ li.menu-item {
+				padding-top: 15px;
+				
+				@include media(tablet) {
+					padding-top: 0;
+				}
+			}
+						
+			.sub-menu {
+					
+				// An individual link within a column
+				li.menu-item {
+					// display: inline;
+					margin-right: 1rem;
+					line-height: 1rem;
 
-				+ li {
-					padding-top: 10px;
+					// Individual links after the first one in that link's column
+					+ li.menu-item {
+						padding-top: 10px;
+					}
 				}
 			}
 		}
 
-		padding-left: 0;
+				
+		.social-links {
+			margin: auto;
+			align-content: center;
 
+			a {
+				background: #6ec1e4;
+				border-radius: .35rem;
+				font-size: 2rem;
+				color: #fff;
+				display: inline-block;
+				text-align: center;
+				line-height: 1;
+			}
+
+			i {
+				padding: .35rem;
+				width: 1.4em;
+			}	
+		}
 	}
 }
