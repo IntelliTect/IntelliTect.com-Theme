@@ -6,7 +6,7 @@ $logo-padding: 5px;
 $admin-bar-height: 32px;
 
 .site-header {
-	padding: 1em;
+	// padding: 1em;
 
 	// bump the header down to account for the fixed-position menu bar.
 	margin-top: $header-height !important;
@@ -28,7 +28,7 @@ $admin-bar-height: 32px;
 
 	@include media(tablet) {
 		margin: 0;
-		padding: 0 0 1rem 0;
+		// padding: 0 0 1rem 0;
 
 		&.featured-image {
 			min-height: 40vh;
@@ -115,7 +115,7 @@ $admin-bar-height: 32px;
 
 .site-title {
 	$title-margin-adjust: $logo-padding - $header-padding;
-	margin: $title-margin-adjust 10px $title-margin-adjust 0;
+	margin: $title-margin-adjust 10px;
 	display: inline;
 	color: $color__menu;
 

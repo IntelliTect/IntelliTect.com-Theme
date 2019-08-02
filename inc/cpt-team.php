@@ -42,8 +42,8 @@ function team_custom_post_type() {
 		return $show;
 	});
 
-	add_filter( 'get_next_post_where', 'get_next_post_where_callback' );
-	add_filter( 'get_previous_post_where', 'get_previous_post_where_callback' );
+	add_filter( 'get_next_post_where', 'team_get_next_post_where_callback' );
+	add_filter( 'get_previous_post_where', 'team_get_previous_post_where_callback' );
 }
 
 add_action('init', 'team_custom_post_type', 0);
@@ -98,7 +98,7 @@ function get_ordered_team_members() {
 		order by is_lead.meta_value desc, lead_order.meta_value asc, last_name.meta_value asc, first_name.meta_value asc");
 }
 
-function get_previous_post_where_callback( $where ){
+function team_get_previous_post_where_callback( $where ){
 	global $post;
 	if ($post->post_type != 'cpt_team') return $where;
 
@@ -119,7 +119,7 @@ function get_previous_post_where_callback( $where ){
 	return 'WHERE 0=1';
 }
 
-function get_next_post_where_callback( $where ){
+function team_get_next_post_where_callback( $where ){
 	global $post;
 	if ($post->post_type != 'cpt_team') return $where;
 

@@ -19,7 +19,7 @@
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
 		<div class="site-info">
 			<?php $blog_info = get_bloginfo( 'name' ); ?>
-			
+
 			<?php
 			if ( function_exists( 'the_privacy_policy_link' ) ) {
 				the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
@@ -42,9 +42,9 @@
 					$last_column = "
 					<li class='menu-item menu-item-has-children'>
 						<a >&nbsp;</a>
-						
+
 						<img src='$template_dir/static/Microsoft-Gold-Partner-Logo.jpg' />
-					
+
 						<a >&nbsp;</a>
 
 						<div class='social-links' >
@@ -61,24 +61,19 @@
 								<i class='fa fa-envelope'></i>
 							</a>
 						</div>
-
-				</li>
+					</li>
 					";
 
-					$copyright = "
+					$menu = substr_replace($menu, $last_column, $close_ul_pos, 0);
+					echo $menu;
+					?>
 					<p style='text-align: center;'>
-						© IntelliTect 2019
+						© IntelliTect <?= date("Y") ?>
 						&nbsp;&nbsp;
 						<a href='/site-map/'>Site Map</a>
 						&nbsp;&nbsp;
 						<a href='/privacy-policy/'>Our Privacy Policy</a>
 					</p>
-					
-					";
-
-					$menu = substr_replace($menu, $last_column, $close_ul_pos, 0);
-					echo $menu . $copyright;
-					?>
 				</nav><!-- .footer-navigation -->
 			<?php endif; ?>
 		</div><!-- .site-info -->
