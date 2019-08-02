@@ -195,18 +195,6 @@ function twentynineteen_widgets_init() {
 		)
 	);
 
-
-	add_shortcode('intellitect_recent_blogs', function($atts) {
-		$atts = shortcode_atts( array(
-			'count' => 3,
-			'category' => 'blog',
-		), $atts, 'intellitect_recent_blogs' );
-
-		ob_start();
-		extract($atts);
-		include( locate_template( 'template-parts/shortcodes/recent_blogs.php', false, false ) );
-        return ob_get_clean();
-	});
 }
 add_action( 'widgets_init', 'twentynineteen_widgets_init' );
 
