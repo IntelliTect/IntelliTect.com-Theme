@@ -176,6 +176,8 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'twentynineteen_setup' );
 
+
+
 /**
  * Register widget area.
  *
@@ -197,6 +199,11 @@ function twentynineteen_widgets_init() {
 
 }
 add_action( 'widgets_init', 'twentynineteen_widgets_init' );
+
+add_filter('comment_form_default_fields', function($fields) {
+	$fields['url'] = null;
+	return $fields;
+});
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

@@ -11,7 +11,7 @@ $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentyni
 
 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-<?php if ( ! is_page() ) : ?>
+<?php if ( ! is_page() && twentynineteen_can_show_post_meta() ) : ?>
 <div class="entry-meta">
 	<?php twentynineteen_posted_by(); ?>
 	<?php twentynineteen_posted_on(); ?>

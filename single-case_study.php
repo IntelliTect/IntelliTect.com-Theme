@@ -75,6 +75,8 @@ get_header();
 
 				get_template_part( 'template-parts/content/content', 'single' );
 
+				get_template_part( 'template-parts/footer/navigation', 'single-reverse' );
+
 			endwhile; // End of the loop.
 			?>
 

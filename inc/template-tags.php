@@ -7,11 +7,20 @@
  * @since 1.0.0
  */
 
+if ( ! function_exists('twentynineteen_can_show_post_meta' ) ):
+	function twentynineteen_can_show_post_meta() {
+		return apply_filters('twentynineteen_can_show_post_meta', true);
+	}
+
+endif;
+
 if ( ! function_exists( 'twentynineteen_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function twentynineteen_posted_on() {
+		if (!twentynineteen_can_show_post_meta()) return;
+
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -39,6 +48,8 @@ if ( ! function_exists( 'twentynineteen_posted_by' ) ) :
 	 * Prints HTML with meta information about theme author.
 	 */
 	function twentynineteen_posted_by() {
+		if (!twentynineteen_can_show_post_meta()) return;
+
 		printf(
 			/* translators: 1: SVG icon. 2: post author, only visible to screen readers. 3: author link. */
 			'<span class="byline">%1$s<span class="screen-reader-text">%2$s</span><span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
@@ -55,6 +66,8 @@ if ( ! function_exists( 'twentynineteen_comment_count' ) ) :
 	 * Prints HTML with the comment count for the current post.
 	 */
 	function twentynineteen_comment_count() {
+		if (!twentynineteen_can_show_post_meta()) return;
+
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			echo twentynineteen_get_icon_svg( 'comment', 16 );

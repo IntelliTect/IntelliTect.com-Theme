@@ -23,7 +23,7 @@
 		display: flex;
 		flex-flow: column;
 		padding-left: 0;
-			
+
 		@include media(tablet) {
 			// on non-phones...
 			flex-flow: row;
@@ -34,6 +34,7 @@
 			flex: 1 1 0;
 			display: flex;
 			flex-flow: column nowrap;
+
 
 			// The header at the start of each column
 			> a {
@@ -49,18 +50,18 @@
 					margin-bottom: 1rem;
 				}
 			}
-			
+
 			// Columns after the first column
 			+ li.menu-item {
 				padding-top: 15px;
-				
+
 				@include media(tablet) {
 					padding-top: 0;
 				}
 			}
-						
+
 			.sub-menu {
-					
+
 				// An individual link within a column
 				li.menu-item {
 					// display: inline;
@@ -75,15 +76,21 @@
 			}
 		}
 
-				
+
+		img {
+			max-height: 160px;
+			object-fit: scale-down;
+		}
+
 		.social-links {
-			margin: auto;
-			align-content: center;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-around;
 
 			a {
 				background: #6ec1e4;
 				border-radius: .35rem;
-				font-size: 2rem;
+				font-size: 1.5rem;
 				color: #fff;
 				display: inline-block;
 				text-align: center;
@@ -93,7 +100,7 @@
 			i {
 				padding: .35rem;
 				width: 1.4em;
-			}	
+			}
 		}
 	}
 }

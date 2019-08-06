@@ -10,7 +10,7 @@ function team_custom_post_type() {
 		'description'         => 'Team Description',
 		'labels'              => array(
 			'name'                => 'Team',
-			'singular_name'       => 'Team member',
+			'singular_name'       => 'Team Member',
 			'menu_name'           => 'Team',
 			'parent_item_colon'   => 'Parent Item:',
 			'all_items'           => 'All Team',

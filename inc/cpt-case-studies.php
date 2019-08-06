@@ -87,23 +87,8 @@ function case_studies_custom_post_type() {
 // Hook into the 'init' action
 add_action('init', 'case_studies_custom_post_type', 0);
 
+add_filter('twentynineteen_can_show_post_meta', function($show) {
+	if (get_post_type() == 'case_study') return false;
+	return $show;
+});
 
-
-
-function get_index_of_cases() {
-    global $wpdb;
-
-    $rand_posts = $wpdb->get_results(
-        "SELECT ID, post_title, post_status, post_type FROM `wp_posts` WHERE post_type = 'case_study' AND post_status = 'publish' ORDER BY post_date_gmt DESC"
-    );
-
-    $case_studies = array();
-
-    foreach ($rand_posts as $key => $rand) {
-      $title = $rand->post_title;
-      $id = $rand->ID;
-      $case_studies[$key]['ID'] = $id;
-      $case_studies[$key]['title'] = $title;
-    }
-    return $case_studies;
-}

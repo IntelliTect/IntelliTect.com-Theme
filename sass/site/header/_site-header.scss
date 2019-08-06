@@ -2,17 +2,17 @@
 
 $header-height: 50px;
 $header-padding: 10px;
-$logo-padding: 5px;
+$logo-padding: 7px;
 $admin-bar-height: 32px;
 
 .site-header {
-	// padding: 1em;
+	// padding: 0 0 1rem 0;
 
 	// bump the header down to account for the fixed-position menu bar.
 	margin-top: $header-height !important;
-	.admin-bar & {
-		margin-top: #{$header-height + $admin-bar-height} !important;
-	}
+	// .admin-bar & {
+	// 	margin-top: #{$header-height + $admin-bar-height} !important;
+	// }
 
 	&.featured-image {
 		display: flex;
@@ -28,10 +28,9 @@ $admin-bar-height: 32px;
 
 	@include media(tablet) {
 		margin: 0;
-		// padding: 0 0 1rem 0;
 
 		&.featured-image {
-			min-height: 40vh;
+			min-height: 50vh;
 			margin-bottom: 3rem;
 		}
 	}
@@ -133,7 +132,7 @@ $admin-bar-height: 32px;
 	}
 
 	img {
-		height: $header-height + ( $title-margin-adjust * 2 );
+		height: $header-height - ( $logo-padding * 2 );
 	}
 
 	.featured-image & {
