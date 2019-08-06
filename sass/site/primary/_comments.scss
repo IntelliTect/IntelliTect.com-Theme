@@ -7,21 +7,21 @@
 }
 
 .comments-area {
-	margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit;
+	margin: calc(1.5 * #{$size__spacing-unit}) $size__spacing-unit;
 	@include postContentMaxWidth();
 
 	@include media(tablet) {
-		margin: calc(3 * #{$size__spacing-unit}) $size__site-margins;
+		margin: calc(2 * #{$size__spacing-unit}) $size__site-margins;
 	}
 
 	& > * {
-		margin-top: calc(2 * #{$size__spacing-unit});
-		margin-bottom: calc(2 * #{$size__spacing-unit});
+		margin-top: calc(1 * #{$size__spacing-unit});
+		margin-bottom: calc(1 * #{$size__spacing-unit});
 
-		@include media(tablet) {
-			margin-top: calc(3 * #{$size__spacing-unit});
-			margin-bottom: calc(3 * #{$size__spacing-unit});
-		}
+		// @include media(tablet) {
+		// 	margin-top: calc(1 * #{$size__spacing-unit});
+		// 	margin-bottom: calc(1 * #{$size__spacing-unit});
+		// }
 	}
 
 	/* Add extra margin when the comments section is located immediately after the
@@ -40,7 +40,7 @@
 		}
 
 		.comments-title {
-			@include post-section-dash;
+			// @include post-section-dash;
 			margin: 0;
 
 			@include media(tablet) {

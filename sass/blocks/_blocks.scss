@@ -4,8 +4,8 @@
 	margin: 0 !important;
 }
 
-.entry .entry-content > *,
-.entry .entry-summary > * {
+.entry .entry-content > *:not(:empty),
+.entry .entry-summary > *:not(:empty) {
 	margin: 32px 0;
 	max-width: 100%;
 

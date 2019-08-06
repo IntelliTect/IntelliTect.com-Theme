@@ -794,17 +794,6 @@ h6 {
   margin: 1rem 0;
 }
 
-h1:not(.site-title):before,
-h2:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-  opacity: 0;
-}
-
 hr {
   background-color: #767676;
   border: 0;
@@ -1751,19 +1740,19 @@ a:focus {
 --------------------------------------------------------------*/
 /* Next/Previous navigation */
 .post-navigation {
-  margin: calc(3 * 1rem) 0;
+  margin: calc(1.5 * 1rem) 0;
 }
 
 @media only screen and (min-width: 768px) {
   .post-navigation {
-    margin: calc(3 * 1rem) calc(10% + 60px);
+    margin: calc(2 * 1rem) calc(10% + 60px);
     max-width: calc(6 * (100vw / 12));
   }
 }
 
 @media only screen and (min-width: 1168px) {
   .post-navigation {
-    margin: calc(3 * 1rem) 0;
+    margin: calc(2 * 1rem) 0;
     max-width: 100%;
   }
 }
@@ -1835,6 +1824,7 @@ a:focus {
 .post-navigation .nav-links .nav-previous .meta-nav:before {
   content: '←';
   display: inline;
+  padding-left: 10px;
 }
 
 .post-navigation .nav-links .nav-next {
@@ -1853,6 +1843,7 @@ a:focus {
 .post-navigation .nav-links .nav-next .meta-nav:after {
   content: '→';
   display: inline;
+  padding-right: 10px;
 }
 
 .pagination .nav-links {
@@ -2060,10 +2051,6 @@ a:focus {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  margin-top: 50px !important;
-}
-
-.admin-bar .site-header {
   margin-top: 50px !important;
 }
 
@@ -2499,13 +2486,13 @@ a:focus {
 }
 
 .entry .entry-header {
-  margin: calc(3 * 1rem) 1rem 1rem;
+  margin: calc(1.5 * 1rem) 1rem 1rem;
   position: relative;
 }
 
 @media only screen and (min-width: 768px) {
   .entry .entry-header {
-    margin: calc(3 * 1rem) calc(10% + 60px) 1rem;
+    margin: calc(2 * 1rem) calc(10% + 60px) 1rem;
   }
 }
 
@@ -2832,7 +2819,7 @@ a:focus {
 }
 
 .comments-area {
-  margin: calc(2 * 1rem) 1rem;
+  margin: calc(1.5 * 1rem) 1rem;
   /* Add extra margin when the comments section is located immediately after the
 	 * post itself (this happens on pages).
 	 */
@@ -2852,20 +2839,13 @@ a:focus {
 
 @media only screen and (min-width: 768px) {
   .comments-area {
-    margin: calc(3 * 1rem) calc(10% + 60px);
+    margin: calc(2 * 1rem) calc(10% + 60px);
   }
 }
 
 .comments-area > * {
-  margin-top: calc(2 * 1rem);
-  margin-bottom: calc(2 * 1rem);
-}
-
-@media only screen and (min-width: 768px) {
-  .comments-area > * {
-    margin-top: calc(3 * 1rem);
-    margin-bottom: calc(3 * 1rem);
-  }
+  margin-top: calc(1 * 1rem);
+  margin-bottom: calc(1 * 1rem);
 }
 
 .entry + .comments-area {
@@ -2882,16 +2862,6 @@ a:focus {
 
 .comments-area .comments-title-wrap .comments-title {
   margin: 0;
-}
-
-.comments-area .comments-title-wrap .comments-title:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-  opacity: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3464,66 +3434,74 @@ a:focus {
   text-decoration: underline;
 }
 
+.heateorSssClear {
+  display: none;
+}
+
+.entry-content > .ctx-clearfix {
+  margin: 0 !important;
+}
+
 /* Blocks */
 /* !Block styles */
 .entry.excerpt .entry-content p:first-child {
   margin: 0 !important;
 }
 
-.entry .entry-content > *,
-.entry .entry-summary > * {
+.entry .entry-content > *:not(:empty),
+.entry .entry-summary > *:not(:empty) {
   margin: 32px 0;
   max-width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content > *,
-  .entry .entry-summary > * {
+  .entry .entry-content > *:not(:empty),
+  .entry .entry-summary > *:not(:empty) {
     max-width: calc(8 * (100vw / 12) - 28px);
   }
 }
 
 @media only screen and (min-width: 1168px) {
-  .entry .entry-content > *,
-  .entry .entry-summary > * {
+  .entry .entry-content > *:not(:empty),
+  .entry .entry-summary > *:not(:empty) {
     max-width: calc(6 * (100vw / 12) - 28px);
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content > *,
-  .entry .entry-summary > * {
+  .entry .entry-content > *:not(:empty),
+  .entry .entry-summary > *:not(:empty) {
     margin: 32px 0;
   }
 }
 
-.entry .entry-content > * > *:first-child,
-.entry .entry-summary > * > *:first-child {
+.entry .entry-content > *:not(:empty) > *:first-child,
+.entry .entry-summary > *:not(:empty) > *:first-child {
   margin-top: 0;
 }
 
-.entry .entry-content > * > *:last-child,
-.entry .entry-summary > * > *:last-child {
+.entry .entry-content > *:not(:empty) > *:last-child,
+.entry .entry-summary > *:not(:empty) > *:last-child {
   margin-bottom: 0;
 }
 
-.entry .entry-content > *.alignwide,
-.entry .entry-summary > *.alignwide {
+.entry .entry-content > *:not(:empty).alignwide,
+.entry .entry-summary > *:not(:empty).alignwide {
   margin-right: auto;
   margin-left: auto;
   clear: both;
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content > *.alignwide,
-  .entry .entry-summary > *.alignwide {
+  .entry .entry-content > *:not(:empty).alignwide,
+  .entry .entry-summary > *:not(:empty).alignwide {
     width: 100%;
     max-width: 100%;
   }
 }
 
-.entry .entry-content > *.alignfull,
-.entry .entry-summary > *.alignfull {
+.entry .entry-content > *:not(:empty).alignfull,
+.entry .entry-summary > *:not(:empty).alignfull {
   position: relative;
   right: -1rem;
   width: calc( 100% + (2 * 1rem));
@@ -3532,8 +3510,8 @@ a:focus {
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content > *.alignfull,
-  .entry .entry-summary > *.alignfull {
+  .entry .entry-content > *:not(:empty).alignfull,
+  .entry .entry-summary > *:not(:empty).alignfull {
     margin-top: calc(2 * 1rem);
     margin-bottom: calc(2 * 1rem);
     right: calc( -12.5% - 75px);
@@ -3542,8 +3520,8 @@ a:focus {
   }
 }
 
-.entry .entry-content > *.alignleft,
-.entry .entry-summary > *.alignleft {
+.entry .entry-content > *:not(:empty).alignleft,
+.entry .entry-summary > *:not(:empty).alignleft {
   float: left;
   max-width: calc(5 * (100vw / 12));
   margin-top: 0;
@@ -3552,15 +3530,15 @@ a:focus {
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content > *.alignleft,
-  .entry .entry-summary > *.alignleft {
+  .entry .entry-content > *:not(:empty).alignleft,
+  .entry .entry-summary > *:not(:empty).alignleft {
     max-width: calc(4 * (100vw / 12));
     margin-right: calc(2 * 1rem);
   }
 }
 
-.entry .entry-content > *.alignright,
-.entry .entry-summary > *.alignright {
+.entry .entry-content > *:not(:empty).alignright,
+.entry .entry-summary > *:not(:empty).alignright {
   float: right;
   max-width: calc(5 * (100vw / 12));
   margin-top: 0;
@@ -3569,37 +3547,37 @@ a:focus {
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content > *.alignright,
-  .entry .entry-summary > *.alignright {
+  .entry .entry-content > *:not(:empty).alignright,
+  .entry .entry-summary > *:not(:empty).alignright {
     max-width: calc(4 * (100vw / 12));
     margin-left: 0;
     margin-left: calc(2 * 1rem);
   }
 }
 
-.entry .entry-content > *.aligncenter,
-.entry .entry-summary > *.aligncenter {
+.entry .entry-content > *:not(:empty).aligncenter,
+.entry .entry-summary > *:not(:empty).aligncenter {
   margin-right: auto;
   margin-left: auto;
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content > *.aligncenter,
-  .entry .entry-summary > *.aligncenter {
+  .entry .entry-content > *:not(:empty).aligncenter,
+  .entry .entry-summary > *:not(:empty).aligncenter {
     max-width: calc(8 * (100vw / 12) - 28px);
   }
 }
 
 @media only screen and (min-width: 1168px) {
-  .entry .entry-content > *.aligncenter,
-  .entry .entry-summary > *.aligncenter {
+  .entry .entry-content > *:not(:empty).aligncenter,
+  .entry .entry-summary > *:not(:empty).aligncenter {
     max-width: calc(6 * (100vw / 12) - 28px);
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content > *.aligncenter,
-  .entry .entry-summary > *.aligncenter {
+  .entry .entry-content > *:not(:empty).aligncenter,
+  .entry .entry-summary > *:not(:empty).aligncenter {
     margin-right: 0;
     margin-left: 0;
   }
