@@ -46,7 +46,7 @@ get_header();
 			</h1>
 		</header>
 
-		<div class="entry-content case-studies-archive">
+		<div class="entry-content wide-content case-studies-archive">
 			<form class="case-studies-search-form" method="POST" action="">
 				<div class="case-studies-tax-filters" style="display: flex">
 

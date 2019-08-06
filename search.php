@@ -9,6 +9,8 @@
  * @since 1.0.0
  */
 
+add_filter('twentynineteen_image_filters_enabled', function($f) { return false; } );
+
 get_header();
 ?>
 
@@ -17,12 +19,14 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php _e( 'Search results for:', 'twentynineteen' ); ?>
-				</h1>
-				<div class="page-description"><?php echo get_search_query(); ?></div>
-			</header><!-- .page-header -->
+
+			<div class="entry">
+				<header class="entry-header">
+					<h1 class="entry-title">
+						Search: <?php echo get_search_query(); ?></div>
+					</h1>
+				</header>
+			</div>
 
 			<div class="posts_container">
 			<?php

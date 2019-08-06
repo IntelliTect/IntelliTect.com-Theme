@@ -4,12 +4,16 @@
 	margin: 0 !important;
 }
 
-.entry .entry-content > *:not(:empty),
-.entry .entry-summary > *:not(:empty) {
-	margin: 32px 0;
+.entry .entry-content:not(.wide-content) > *,
+.entry .entry-summary:not(.wide-content) > * {
 	max-width: 100%;
 
 	@include postContentMaxWidth();
+}
+
+.entry .entry-content > *:not(:empty),
+.entry .entry-summary > *:not(:empty) {
+	margin: 32px 0;
 
 	@include media(tablet) {
 		margin: 32px 0;
