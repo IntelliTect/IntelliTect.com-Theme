@@ -4722,12 +4722,13 @@ svg {
   flex-flow: column nowrap;
   flex: 1 1 auto;
   background: #eee;
+  width: 100%;
 }
 
 .case-studies-archive .case-studies-item__wrap .case-studies-item__main .case-studies-item__image-wrap {
   flex: 0 0;
   height: 186px;
-  /* min-height: 186px; */
+  min-height: 186px;
   line-height: 0;
 }
 
@@ -4893,6 +4894,7 @@ svg {
 
 .team-member .team-member__image {
   background: #fff;
+  min-height: 1px;
 }
 
 .team-member .team-member__image img {

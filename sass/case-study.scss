@@ -60,11 +60,12 @@
 			flex-flow: column nowrap;
 			flex: 1 1 auto;
 			background: #eee;
+			width: 100%; // IE11 fix.
 
 			.case-studies-item__image-wrap {
 				flex: 0 0;
 				height: 186px;
-				/* min-height: 186px; */
+				min-height: 186px; // IE11 fix.
 				line-height: 0;
 
 				img {

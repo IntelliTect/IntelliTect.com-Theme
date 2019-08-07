@@ -48,6 +48,7 @@
 
 	.team-member__image {
 		background: #fff;
+		min-height: 1px; // IE11 fix: https://github.com/philipwalton/flexbugs/issues/75
 
 		img {
 			display: block;
