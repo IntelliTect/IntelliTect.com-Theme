@@ -23,7 +23,7 @@
 				<h1 class="entry-title">
 					<?php the_title(); ?>
 					<span class="team-member-subtitle">
-						<?= get_post_meta(get_the_ID(), 'author_title', true) ?>
+						<?= get_post_meta(get_the_ID(), 'subtitle', true) ?>
 					</span>
 				</h1>
 			</div>
