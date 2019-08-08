@@ -82,7 +82,7 @@ get_header();
 					while ( $query->have_posts() ) :
 						$query->the_post();
 						$link = get_permalink();
-						$subtitle = get_post_meta(get_the_ID(), 'author_title', true);
+						$subtitle = get_post_meta(get_the_ID(), 'subtitle', true);
 					?>
 
 						<div class="team-member">
