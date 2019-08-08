@@ -49,6 +49,8 @@
 		display: inline-block;
 		margin: 0;
 		padding: 0;
+		font-weight: 400;
+		font-size: 1em;
 
 		> li {
 
@@ -58,12 +60,11 @@
 
 			> a {
 
-				font-weight: 700;
 				color: $color__menu;
-				margin-right: #{0.5 * $size__spacing-unit};
+				margin-right: #{1 * $size__spacing-unit};
 
 				+ svg {
-					margin-right: #{0.5 * $size__spacing-unit};
+					margin-right: #{1 * $size__spacing-unit};
 				}
 
 				&:hover,

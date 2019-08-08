@@ -31,7 +31,7 @@
 
 		// Root-level li elements that behave like columns
 		> li.menu-item {
-			flex: 1 1 0;
+			flex: 1 1 auto;
 			display: flex;
 			flex-flow: column nowrap;
 
@@ -78,7 +78,7 @@
 
 
 		img {
-			max-height: 160px;
+			max-height: 130px;
 			object-fit: scale-down;
 		}
 
