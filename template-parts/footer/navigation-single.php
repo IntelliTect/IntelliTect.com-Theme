@@ -12,5 +12,7 @@ the_post_navigation(
 		'prev_text' => '<span class="meta-nav" aria-hidden="true">Previous ' . $name . '</span> ' .
 			'<span class="screen-reader-text">Previous ' . $name . '</span> <br/>' .
 			'<span class="post-title">%title</span>',
+
+		'in_same_term' => $postType == 'post',
 	)
 );
