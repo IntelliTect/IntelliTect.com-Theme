@@ -113,3 +113,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "sass/case-study";
 @import "sass/team";
 @import "sass/shortcodes/testimonials";
+
+.syntaxhighlighter {
+	// Custom styles for https://wordpress.org/plugins/syntaxhighlighter/
+
+	padding: 10px 0;
+	&.nogutter {
+		padding: 10px 15px;
+	}
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}

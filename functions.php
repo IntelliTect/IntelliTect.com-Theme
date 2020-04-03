@@ -366,6 +366,22 @@ function the_reverse_post_navigation( $args = array() ) {
 }
 
 
+
+
+
+// https://github.com/Viper007Bond/syntaxhighlighter/issues/98#issuecomment-471322528
+function ntz_fix_syntax_highlighter($content)
+{
+	return preg_replace('/&amp;([^;]+;)/', '&$1', $content);
+}
+add_filter('content_save_pre', 'ntz_fix_syntax_highlighter');
+add_filter('syntaxhighlighter_htmlresult', 'ntz_fix_syntax_highlighter');
+add_filter('syntaxhighlighter_precode', 'ntz_fix_syntax_highlighter');
+
+
+
+
+
 /**
  * SVG Icons class.
  */
