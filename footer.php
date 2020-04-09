@@ -69,10 +69,15 @@
 					?>
 					<p style='text-align: center;'>
 						© IntelliTect <?= date("Y") ?>
+					</p>
+					<p style='text-align: center;'>
+						<a href="https://goo.gl/maps/WxbXuvZGjw1j9vpWA">
+							1720 W 4th Ave Unit B, Spokane, WA 99201
+						</a>
 						&nbsp;&nbsp;
-						<a href='/site-map/'>Site Map</a>
-						&nbsp;&nbsp;
-						<a href='/privacy-policy/'>Our Privacy Policy</a>
+						<a href="tel:1-509-315-3400">
+						(509) 315-3400
+						</a>
 					</p>
 				</nav><!-- .footer-navigation -->
 			<?php endif; ?>
