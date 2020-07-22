@@ -1,4 +1,3 @@
-
 <?php
 
 function case_studies_custom_post_type() {
